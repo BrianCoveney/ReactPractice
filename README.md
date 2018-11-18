@@ -1,6 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Fetch repo
+## Setting up
 
 
 In the directory where you keep your React apps, run:
