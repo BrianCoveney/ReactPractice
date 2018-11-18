@@ -26,7 +26,8 @@ class ReduxCounter extends React.Component {
     }
 }
 
-
+// This functions takes the entire Redux state, and is expected to return and object
+// where the keys are 'prop names' and the value are 'prop values'.
 const mapStateToProps = (state) => ({
     count: state.count
 });

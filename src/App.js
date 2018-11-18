@@ -1,15 +1,21 @@
 import React, { Component } from 'react';
 import  { createStore } from 'redux';
+import  { Provider } from 'react-redux';
 import './App.css';
 import StatefulCounter from './StatefulCounter';
 import StatelessFunctionalComponent from './StatelessFunctionalComponent';
 import ReduxCounter from './ReduxCounter';
-import  { Provider } from 'react-redux';
 
-function reducer() {
-  return {
-    count: 42
-  };
+
+const initalState = {
+  count: 42
+};
+
+// This functions tells redux what the initial state of the store is.
+// It also is responsible for returning the new state.
+// Here we are using ES6 defalut arguments to assign the state when it's undefined.
+function reducer(state = initalState, action) {
+  return state;
 }
 
 const store = createStore(reducer);
@@ -23,6 +29,7 @@ class App extends Component {
         </Provider>
         
         <StatefulCounter />
+
         <StatelessFunctionalComponent name="Brian" date={ (new Date().getFullYear()) } />
       </div>
     );
