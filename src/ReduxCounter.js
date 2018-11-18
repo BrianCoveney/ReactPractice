@@ -5,11 +5,11 @@ class ReduxCounter extends React.Component {
 
 
     increment = () => {
-        // TODO
+        this.props.dispatch({ type: 'INCREMENT' })
     };
 
     decrement = () => {
-        // TODO
+        this.props.dispatch({ type: 'DECREMENT' })
     };
 
     render() {
